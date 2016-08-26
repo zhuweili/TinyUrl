@@ -25,7 +25,7 @@ var warm_cache = function (message, callback) {
             if (err) {
                 return console.log(err);
             } else {
-                console.log("Number of preoad keys: " + keys.length);
+                console.log("Number of preload keys: " + keys.length);
             }
 
         });
