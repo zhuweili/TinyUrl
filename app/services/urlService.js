@@ -40,7 +40,10 @@ var getShortUrl = function (longUrl, callback) {
             });
         } else {
             UrlModel.findOne({ longUrl: longUrl }, function (err, url) {
+                console.log("oops! not found in redis");
                 if (url) {
+                    redisClient.set(url.shortUrl, url.longUrl);
+                    redisClient.set(url.longUrl, url.shortUrl);
                     callback(url);
                 } else {
                     generateShortUrl(function (shortUrl) {

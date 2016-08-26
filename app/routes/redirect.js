@@ -3,11 +3,11 @@
  */
 var express = require('express');
 var router = express.Router();
-var uslService = require('../services/urlService');
+var urlService = require('../services/urlService');
 
 router.get('*', function(req, res) {
     var shortUrl = req.originalUrl.slice(1);
-    var longUrl = uslService.getLongUrl(shortUrl, function(url) {
+    urlService.getLongUrl(shortUrl, function(url) {
         if (url) {
             res.redirect(url.longUrl);
         } else {

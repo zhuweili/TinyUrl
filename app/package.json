@@ -1,19 +1,26 @@
 {
-  "name": "MEAN_tinyurl",
-  "version": "0.0.0",
-  "private": true,
+  "name": "full-stack-tinyurl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhewangjoe/full-stack-tinyurl.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhewangjoe/full-stack-tinyurl/issues"
+  },
+  "homepage": "https://github.com/zhewangjoe/full-stack-tinyurl#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.2.0",
-    "express": "^4.13.4",
-    "jade": "~1.11.0",
-    "mongoose": "^4.5.10",
-    "morgan": "~1.7.0",
-    "redis": "^2.6.2",
-    "serve-favicon": "~2.3.0"
+    "express": "^4.14.0",
+    "mongoose": "^4.5.9",
+    "redis": "^2.6.2"
   }
 }

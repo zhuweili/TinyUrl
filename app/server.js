@@ -10,7 +10,16 @@ var redirectRouter = require('./routes/redirect');
 var indexRouter = require('./routes/index');
 var mongoose = require('mongoose');
 
+
+
 mongoose.connect('mongodb://user:user@ds025802.mlab.com:25802/tinyurl');
+
+var reload = require('./reload/warm_up');
+reload.warm_cache("Relaod is done", function (message) {
+    console.log(message);
+});
+
+
 
 
 
