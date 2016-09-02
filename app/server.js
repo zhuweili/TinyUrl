@@ -21,7 +21,7 @@ reload.warm_cache("Relaod is done", function (message) {
 
 
 
-
+app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
 app.use('/public', express.static(__dirname + '/public'));
 
