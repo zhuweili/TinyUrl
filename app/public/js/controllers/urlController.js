@@ -30,10 +30,10 @@ app.controller("urlController",
                         lengend = info._id.hour + ":" + info._id.minutes;
                     }
                     if (time === 'day') {
-                        lengend = info._id.hour + ":" + ':00';
+                        lengend = info._id.hour  + ':00';
                     }
                     if (time === 'month') {
-                        lengend = info._id.month + "/" + info._id.hour;
+                        lengend = info._id.month + "/" + info._id.day;
                     }
 
                     $scope['lineLabels'].push(lengend);
